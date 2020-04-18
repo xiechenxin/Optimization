@@ -1,0 +1,10 @@
+
+reset;
+option solver cplex;
+model MyNewFiles/MultiMarket_4.mod;
+data MyNewFiles/MultiMarket_4.dat;
+
+solve;
+
+display x,y > MyNewFiles/MultiMarketSolution.txt;
+close MyNewFiles/MultiMarketSolution.txt;
